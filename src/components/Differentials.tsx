@@ -37,15 +37,15 @@ export default function Differentials() {
           </p>
         </div>
 
-        {/* Bento Grid Layout - 3 columns, asymmetric cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+        {/* Bento Grid Layout - 6 columns for mathematically precise visual rhythm */}
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-6 items-stretch">
           
-          {/* Card 1: Alcance além (Span 2) */}
+          {/* Card 1: Alcance além (Span 4 of 6) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="md:col-span-2 p-8 rounded-3xl bg-brand-card/75 border border-brand-border/60 hover:border-primary-pink/20 transition-all duration-300 flex flex-col justify-between text-left relative overflow-hidden group"
+            className="md:col-span-4 p-8 rounded-3xl bg-brand-card/75 border border-brand-border/60 hover:border-primary-pink/20 transition-all duration-300 flex flex-col justify-between text-left relative overflow-hidden group"
           >
             <div className="absolute top-0 right-0 w-36 h-36 bg-pink-500/5 rounded-full blur-2xl group-hover:bg-pink-500/10 transition-colors"></div>
             <div className="space-y-4">
@@ -69,13 +69,13 @@ export default function Differentials() {
             </div>
           </motion.div>
 
-          {/* Card 2: Conexão Genuína (Span 1) */}
+          {/* Card 2: Conexão Genuína (Span 2 of 6) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="p-8 rounded-3xl bg-brand-card/75 border border-brand-border/60 hover:border-primary-pink/20 transition-all duration-300 flex flex-col justify-between text-left group"
+            className="md:col-span-2 p-8 rounded-3xl bg-brand-card/75 border border-brand-border/60 hover:border-primary-pink/20 transition-all duration-300 flex flex-col justify-between text-left group"
           >
             <div className="space-y-4">
               <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-primary-pink/15 to-primary-lightpink/5 flex items-center justify-center text-rose-300">
@@ -97,13 +97,13 @@ export default function Differentials() {
             </div>
           </motion.div>
 
-          {/* Card 3: Alta Capacidade de Viralização (Span 1) */}
+          {/* Card 3: Alta Capacidade de Viralização (Span 2 of 6) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="p-8 rounded-3xl bg-brand-card/75 border border-brand-border/60 hover:border-primary-pink/20 transition-all duration-300 flex flex-col justify-between text-left group"
+            className="md:col-span-2 p-8 rounded-3xl bg-brand-card/75 border border-brand-border/60 hover:border-primary-pink/20 transition-all duration-300 flex flex-col justify-between text-left group"
           >
             <div className="space-y-4">
               <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-primary-pink/15 to-primary-lightpink/5 flex items-center justify-center text-emerald-300">
@@ -125,13 +125,13 @@ export default function Differentials() {
             </div>
           </motion.div>
 
-          {/* Card 4: Especialista de decisão de compra (Span 2) */}
+          {/* Card 4: Especialista de decisão de compra (Span 4 of 6) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
-            className="md:col-span-2 p-8 rounded-3xl bg-brand-card/75 border border-brand-border/60 hover:border-primary-pink/20 transition-all duration-300 flex flex-col justify-between text-left relative overflow-hidden group"
+            className="md:col-span-4 p-8 rounded-3xl bg-brand-card/75 border border-brand-border/60 hover:border-primary-pink/20 transition-all duration-300 flex flex-col justify-between text-left relative overflow-hidden group"
           >
             <div className="absolute top-0 right-0 w-36 h-36 bg-pink-500/5 rounded-full blur-2xl group-hover:bg-pink-500/10 transition-colors"></div>
             <div className="space-y-4">
@@ -154,13 +154,13 @@ export default function Differentials() {
             </div>
           </motion.div>
 
-          {/* Card 5: Conteúdo Profissional (Span 1.5) */}
+          {/* Card 5: Conteúdo Profissional (Span 3 of 6) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
-            className="md:col-span-1.5 p-8 rounded-3xl bg-brand-card/75 border border-brand-border/60 hover:border-primary-pink/20 transition-all duration-300 flex flex-col justify-between text-left group"
+            className="md:col-span-3 p-8 rounded-3xl bg-brand-card/75 border border-brand-border/60 hover:border-primary-pink/20 transition-all duration-300 flex flex-col justify-between text-left group"
           >
             <div className="space-y-4">
               <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-primary-pink/15 to-primary-lightpink/5 flex items-center justify-center text-primary-pink">
@@ -182,13 +182,13 @@ export default function Differentials() {
             </div>
           </motion.div>
 
-          {/* Card 6: Público engajado qualificado (Span 1.5) */}
+          {/* Card 6: Público engajado qualificado (Span 3 of 6) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.5 }}
-            className="md:col-span-1.5 p-8 rounded-3xl bg-brand-card/75 border border-brand-border/60 hover:border-primary-pink/20 transition-all duration-300 flex flex-col justify-between text-left group"
+            className="md:col-span-3 p-8 rounded-3xl bg-brand-card/75 border border-brand-border/60 hover:border-primary-pink/20 transition-all duration-300 flex flex-col justify-between text-left group"
           >
             <div className="space-y-4">
               <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-primary-pink/15 to-primary-lightpink/5 flex items-center justify-center text-sky-300">
