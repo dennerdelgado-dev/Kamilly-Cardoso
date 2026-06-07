@@ -140,10 +140,12 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-tr from-primary-pink/10 via-transparent to-primary-lightpink/5 z-10 pointer-events-none"></div>
               
               <img
-                src="https://lh3.googleusercontent.com/d/1Mm5ml8q3JQhqrmbMD7cIvK_f-q6UsTFz"
+                src="https://lh3.googleusercontent.com/d/1Mm5ml8q3JQhqrmbMD7cIvK_f-q6UsTFz=w850"
                 alt="Kamilly Cardoso Digital Influencer"
                 className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700 ease-out"
                 referrerPolicy="no-referrer"
+                fetchPriority="high"
+                decoding="async"
               />
 
               {/* Verified badge inside portrait */}

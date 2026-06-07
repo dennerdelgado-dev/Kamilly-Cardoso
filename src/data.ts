@@ -34,32 +34,32 @@ export const kamillyCardoso = {
     { 
       title: "Cabelos", 
       description: "Tutoriais de finalização, rotinas de saúde dos fios, cronograma capilar e resenhas de produtos que viram febre.",
-      image: "https://lh3.googleusercontent.com/d/1g4Uj1kwjhQbd0rvkdHEnDhHuSPAjyJd6" 
+      image: "https://lh3.googleusercontent.com/d/1g4Uj1kwjhQbd0rvkdHEnDhHuSPAjyJd6=w450" 
     },
     { 
       title: "Beleza", 
       description: "Skincare simplificado, maquiagens para o dia a dia e avaliações honestas de lançamentos de cosméticos.",
-      image: "https://lh3.googleusercontent.com/d/1A1qZCrenluvklvua3BJh2vnSdf9kQazU" 
+      image: "https://lh3.googleusercontent.com/d/1A1qZCrenluvklvua3BJh2vnSdf9kQazU=w450" 
     },
     { 
       title: "Moda", 
       description: "Provadores interativos, combinação de looks fáceis de reproduzir e inspirações de outfits modernos e casuais.",
-      image: "https://lh3.googleusercontent.com/d/11QQGywY7hfZv0nmY2ccYQ0xXqJSo-Dnu" 
+      image: "https://lh3.googleusercontent.com/d/11QQGywY7hfZv0nmY2ccYQ0xXqJSo-Dnu=w450" 
     },
     { 
       title: "Lifestyle", 
       description: "Rotina criativa, hábitos saudáveis, vlogs estéticos de um dia comum e bem-estar de forma leve.",
-      image: "https://lh3.googleusercontent.com/d/1QjzlB3zy-sHfHC4Jgo-D2deXwgd9QZv5" 
+      image: "https://lh3.googleusercontent.com/d/1QjzlB3zy-sHfHC4Jgo-D2deXwgd9QZv5=w450" 
     },
     { 
       title: "Achadinhos", 
       description: "Indicações dos melhores produtos das principais plataformas (Shopee, SHEIN e Mercado Livre) testados e aprovados.",
-      image: "https://lh3.googleusercontent.com/d/1FRXlMnAqVhx_xoS-J9cN5keBNJ2NH0f_" 
+      image: "https://lh3.googleusercontent.com/d/1FRXlMnAqVhx_xoS-J9cN5keBNJ2NH0f_=w450" 
     },
     { 
       title: "Produtos Virais", 
       description: "Testes práticos de itens que estão bombando nas redes sociais, validando sua eficácia e custo-benefício.",
-      image: "https://lh3.googleusercontent.com/d/1oSS3qlgL3jaGQLRG12HLkXlVa5xmeuqh" 
+      image: "https://lh3.googleusercontent.com/d/1oSS3qlgL3jaGQLRG12HLkXlVa5xmeuqh=w450" 
     }
   ],
 
@@ -140,12 +140,12 @@ export const kamillyCardoso = {
 
   // Client trust signals
   brands: [
-    { name: "@madufitnes", logo: "https://lh3.googleusercontent.com/d/1oSqM-3_FZoySCHyrZYCD96iH2FAOqo-4", url: "https://instagram.com/madufitnes" },
-    { name: "Shopee", logo: "https://lh3.googleusercontent.com/d/1X8mx64Wi02yVuxLeLmO6YmEQ_OnCp8Ga", url: "https://shopee.com.br" },
-    { name: "SHEIN", logo: "https://lh3.googleusercontent.com/d/1SJ-cvmki06rx-C8lq08ZQporDzkAGG-9", url: "https://br.shein.com" },
-    { name: "Mercado Livre", logo: "https://lh3.googleusercontent.com/d/1T8Mr_xwJyOVJrZoz8AyY_0Xkt7OG_SDC", url: "https://www.mercadolivre.com.br" },
-    { name: "AliExpress", logo: "https://lh3.googleusercontent.com/d/1c98gwbKjeWyo6RGZ8sdlE0b3L91nDXlZ", url: "https://pt.aliexpress.com" },
-    { name: "Essendy", logo: "https://lh3.googleusercontent.com/d/1_6txgcfG-6iuTBAELD3I9JtfqODaD28N", url: "https://www.essendy.com.br" }
+    { name: "@madufitnes", logo: "https://lh3.googleusercontent.com/d/1oSqM-3_FZoySCHyrZYCD96iH2FAOqo-4=w160", url: "https://instagram.com/madufitnes" },
+    { name: "Shopee", logo: "https://lh3.googleusercontent.com/d/1X8mx64Wi02yVuxLeLmO6YmEQ_OnCp8Ga=w160", url: "https://shopee.com.br" },
+    { name: "SHEIN", logo: "https://lh3.googleusercontent.com/d/1SJ-cvmki06rx-C8lq08ZQporDzkAGG-9=w160", url: "https://br.shein.com" },
+    { name: "Mercado Livre", logo: "https://lh3.googleusercontent.com/d/1T8Mr_xwJyOVJrZoz8AyY_0Xkt7OG_SDC=w160", url: "https://www.mercadolivre.com.br" },
+    { name: "AliExpress", logo: "https://lh3.googleusercontent.com/d/1c98gwbKjeWyo6RGZ8sdlE0b3L91nDXlZ=w160", url: "https://pt.aliexpress.com" },
+    { name: "Essendy", logo: "https://lh3.googleusercontent.com/d/1_6txgcfG-6iuTBAELD3I9JtfqODaD28N=w160", url: "https://www.essendy.com.br" }
   ],
 
   // Differentials

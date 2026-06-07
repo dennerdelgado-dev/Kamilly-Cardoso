@@ -43,10 +43,12 @@ export default function About() {
                 <div className="relative w-full h-full rounded-xl overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/40 to-transparent"></div>
                   <img
-                    src="https://lh3.googleusercontent.com/d/15kPXoKMln7K04WXgHtV-WaRC15_KSl8A"
+                    src="https://lh3.googleusercontent.com/d/15kPXoKMln7K04WXgHtV-WaRC15_KSl8A=w550"
                     alt="Kamilly Cardoso Lifestyle and Skincare Aesthetic representation"
                     className="w-full h-full object-cover object-center"
                     referrerPolicy="no-referrer"
+                    loading="lazy"
+                    decoding="async"
                   />
                   
                   {/* Small absolute graphic card inside */}

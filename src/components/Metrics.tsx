@@ -300,10 +300,11 @@ export default function Metrics() {
                     className="w-full h-full p-1"
                   >
                     <img
-                      src={currentProof.screenshot}
+                      src={`${currentProof.screenshot}=w450`}
                       alt={`Relatório de ${currentProof.title}`}
                       className="w-full h-full object-cover object-top select-none pointer-events-none rounded-[32px] pt-12 pb-4"
                       referrerPolicy="no-referrer"
+                      decoding="async"
                     />
                   </motion.div>
                 </AnimatePresence>
@@ -353,10 +354,12 @@ export default function Metrics() {
                 </div>
 
                 <img
-                  src={item.screenshot}
+                  src={`${item.screenshot}=w250`}
                   alt={`Galeria Mini ${item.title}`}
                   className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
+                  decoding="async"
                 />
 
                 <div className="absolute inset-0 m-auto w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-90 group-hover:scale-100 z-20">
@@ -400,10 +403,11 @@ export default function Metrics() {
               {/* Left Column: The Large detailed visual panel */}
               <div className="flex-1 bg-zinc-950 p-4 sm:p-6 flex items-center justify-center overflow-y-auto max-h-[50vh] md:max-h-none md:h-[750px]">
                 <img
-                  src={lightboxImage}
+                  src={`${lightboxImage}=w1000`}
                   alt={`Comprovação de ${lightboxTitle}`}
                   className="max-h-full max-w-full object-contain rounded-xl select-none"
                   referrerPolicy="no-referrer"
+                  decoding="async"
                 />
               </div>
 
