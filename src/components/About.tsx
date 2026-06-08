@@ -49,6 +49,8 @@ export default function About() {
                       ${getOptimizedImageUrl("/images/about.webp", 500)} 500w
                     `}
                     sizes="(max-width: 640px) 300px, 500px"
+                    width={380}
+                    height={475}
                     alt="Kamilly Cardoso Lifestyle and Skincare Aesthetic representation"
                     className="w-full h-full object-cover object-center"
                     loading="lazy"
