@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { Instagram, Eye, TrendingUp, Sparkles, ChevronDown, Award } from "lucide-react";
 import { kamillyCardoso } from "../data";
+import Image from "./Image";
 
 // ID do Google Drive da imagem hero
 const HERO_DRIVE_ID = "1u0_cqy50-AfdtT614-AWuCKXm4PpAX6M";
@@ -102,16 +103,14 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-black/10 z-10 mix-blend-multiply opacity-75"></div>
               <div className="absolute inset-0 bg-gradient-to-tr from-primary-pink/10 via-transparent to-primary-lightpink/5 z-10 pointer-events-none"></div>
               
-              <img
-                src={heroSrc}
-                srcSet={heroSrcSet}
+              <Image
+                src="/images/hero.webp"
                 sizes="(max-width: 640px) 400px, 800px"
                 width={400}
                 height={516}
                 alt="Kamilly Cardoso Digital Influencer"
                 className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700 ease-out"
-                fetchPriority="high"
-                decoding="async"
+                priority={true}
               />
 
               {/* Verified badge inside portrait */}

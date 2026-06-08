@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { Sparkles, ArrowUpRight } from "lucide-react";
-import { kamillyCardoso, getOptimizedImageUrl } from "../data";
+import { kamillyCardoso } from "../data";
+import Image from "./Image";
 
 export default function Pillars() {
   const pillars = kamillyCardoso.pillars;
@@ -46,12 +47,12 @@ export default function Pillars() {
               {/* Card Background image with soft dark gradient overlay */}
               <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/95 via-brand-dark/70 to-black/20 z-10 group-hover:via-brand-dark/65 transition-all duration-300"></div>
-                <img
-                  src={getOptimizedImageUrl(item.image, 400)}
+                <Image
+                  src={item.image}
+                  width={400}
+                  height={360}
                   alt={item.title}
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
-                  loading="lazy"
-                  decoding="async"
                 />
               </div>
 

@@ -15,7 +15,8 @@ import {
   Sparkles, 
   ArrowUpRight 
 } from "lucide-react";
-import { kamillyCardoso, getOptimizedImageUrl } from "../data";
+import { kamillyCardoso } from "../data";
+import Image from "./Image";
 
 export default function Metrics() {
   const { metrics } = kamillyCardoso;
@@ -299,12 +300,12 @@ export default function Metrics() {
                     transition={{ duration: 0.3 }}
                     className="w-full h-full p-1"
                   >
-                    <img
-                      src={getOptimizedImageUrl(currentProof.screenshot, 450)}
+                    <Image
+                      src={currentProof.screenshot}
+                      width={450}
+                      height={900}
                       alt={`Relatório de ${currentProof.title}`}
                       className="w-full h-full object-cover object-top select-none pointer-events-none rounded-[32px] pt-12 pb-4"
-                      loading="lazy"
-                      decoding="async"
                     />
                   </motion.div>
                 </AnimatePresence>
@@ -353,12 +354,12 @@ export default function Metrics() {
                   </div>
                 </div>
 
-                <img
-                  src={getOptimizedImageUrl(item.screenshot, 250)}
+                <Image
+                  src={item.screenshot}
+                  width={250}
+                  height={444}
                   alt={`Galeria Mini ${item.title}`}
                   className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                  decoding="async"
                 />
 
                 <div className="absolute inset-0 m-auto w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-90 group-hover:scale-100 z-20">
@@ -401,12 +402,12 @@ export default function Metrics() {
 
               {/* Left Column: The Large detailed visual panel */}
               <div className="flex-1 bg-zinc-950 p-4 sm:p-6 flex items-center justify-center overflow-y-auto max-h-[50vh] md:max-h-none md:h-[750px]">
-                <img
-                  src={getOptimizedImageUrl(lightboxImage || "", 1000)}
+                <Image
+                  src={lightboxImage || ""}
+                  width={1000}
+                  height={1777}
                   alt={`Comprovação de ${lightboxTitle}`}
                   className="max-h-full max-w-full object-contain rounded-xl select-none"
-                  loading="lazy"
-                  decoding="async"
                 />
               </div>
 
