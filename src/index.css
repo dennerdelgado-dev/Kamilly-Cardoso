@@ -1,5 +1,4 @@
 @import "tailwindcss";
-
 @theme {
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Playfair Display", Georgia, serif;
@@ -14,33 +13,29 @@
   --color-brand-border: rgba(255, 255, 255, 0.1);
 }
 
-/* Custom styles for glowing details or scrolls */
 html {
   scroll-behavior: smooth;
   background-color: var(--color-brand-dark);
   color: #FAF8F7;
 }
 
-/* Hide scrollbar for neat presentation but maintain scrolling */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: #0A0A0A;
-}
-::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #FADADD;
+/* Hide scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0A0A0A; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #FADADD; }
+
+/* Prevent reflow: isolate sections that change independently */
+section {
+  contain: layout style;
 }
 
-/* Accent glow background elements */
+/* Ambient glow */
 .ambient-glow {
   filter: blur(140px);
   opacity: 0.12;
   pointer-events: none;
+  will-change: auto;
 }
 
 .glass-premium {
@@ -49,11 +44,9 @@ html {
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
-
 .glass-premium:hover {
   border-color: rgba(250, 218, 221, 0.25);
 }
-
 .glass-active {
   background: rgba(250, 218, 221, 0.1);
   border-color: rgba(250, 218, 221, 0.25);
@@ -66,31 +59,20 @@ html {
   -webkit-text-fill-color: transparent;
 }
 
-/* Highlight style for custom items */
 .gold-glow {
   text-shadow: 0 0 10px rgba(250, 218, 221, 0.4);
 }
 
+/* Mobile drawer animation */
 @keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
+/* Menu item stagger animation */
 @keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
 }
 
 .animate-slide-down {
@@ -100,4 +82,3 @@ html {
 .animate-fade-in-left {
   animation: fadeInLeft 0.4s ease-out forwards;
 }
-
