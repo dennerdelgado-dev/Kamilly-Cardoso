@@ -109,7 +109,7 @@ export const kamillyCardoso = {
       views: "2,8 Milhões", 
       likes: "184 mil",
       shares: "42 mil",
-      image: "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&auto=format&fit=crop&q=80",
+      image: "/images/pillars_cabelos.webp",
       category: "Cabelos" 
     },
     { 
@@ -117,7 +117,7 @@ export const kamillyCardoso = {
       views: "877 Mil", 
       likes: "72 mil",
       shares: "18 mil",
-      image: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&auto=format&fit=crop&q=80",
+      image: "/images/pillars_achadinhos.webp",
       category: "Achadinhos" 
     },
     { 
@@ -125,7 +125,7 @@ export const kamillyCardoso = {
       views: "842 Mil", 
       likes: "68 mil",
       shares: "11 mil",
-      image: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&auto=format&fit=crop&q=80",
+      image: "/images/pillars_moda.webp",
       category: "Moda" 
     },
     { 
@@ -133,7 +133,7 @@ export const kamillyCardoso = {
       views: "663 Mil", 
       likes: "55 mil",
       shares: "9 mil",
-      image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&auto=format&fit=crop&q=80",
+      image: "/images/pillars_lifestyle.webp",
       category: "Lifestyle" 
     }
   ],
@@ -282,17 +282,21 @@ const imageMap: Record<string, string> = {
   "/images/metric_interactions.webp": "10wdhqtmBxxLGd6Rz1R0IP95T13NUox9m"
 };
 
-export function getOptimizedImageUrl(url: string, width: number): string {
+export function getOptimizedImageUrl(url: string, _width: number): string {
   if (!url) return "";
   
+  if (url.startsWith("/images/") || url.startsWith("./images/") || url.startsWith("images/")) {
+    return url;
+  }
+
   const mappedId = imageMap[url];
   if (mappedId) {
-    return `https://lh3.googleusercontent.com/d/${mappedId}=w${width}-rw`;
+    return `https://lh3.googleusercontent.com/d/${mappedId}=w${_width}-rw`;
   }
 
   if (url.includes("lh3.googleusercontent.com/d/")) {
     const base = url.split("=")[0];
-    return `${base}=w${width}-rw`;
+    return `${base}=w${_width}-rw`;
   }
   
   return url;

@@ -23,7 +23,7 @@ export default function Image({
 }: ImageProps) {
   // Automatically generate responsive widths for srcSet using getOptimizedImageUrl
   const srcSet = useMemo(() => {
-    if (src.includes("lh3.googleusercontent.com") || src.startsWith("/") || src.startsWith("./")) {
+    if (src.includes("lh3.googleusercontent.com")) {
       const widths = [200, 300, 400, 500, 600, 800, 1000, 1200];
       return widths
         .map((w) => `${getOptimizedImageUrl(src, w)} ${w}w`)
