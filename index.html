@@ -11,10 +11,21 @@
     <!-- Preconnect to Google Fonts CDN to speed up loading on mobile -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://lh3.googleusercontent.com" crossorigin />
+    <link rel="dns-prefetch" href="https://lh3.googleusercontent.com" />
 
-    <!-- Preload only the high-priority hero image for rapid LCP -->
+    <!-- Preload only the high-priority hero image with matching responsive candidates for rapid LCP -->
     <link rel="preload" as="image" type="image/webp"
-          href="/images/hero.webp" 
+          href="https://lh3.googleusercontent.com/d/1u0_cqy50-AfdtT614-AWuCKXm4PpAX6M=w800-rw"
+          imagesrcset="https://lh3.googleusercontent.com/d/1u0_cqy50-AfdtT614-AWuCKXm4PpAX6M=w200-rw 200w,
+                       https://lh3.googleusercontent.com/d/1u0_cqy50-AfdtT614-AWuCKXm4PpAX6M=w300-rw 300w,
+                       https://lh3.googleusercontent.com/d/1u0_cqy50-AfdtT614-AWuCKXm4PpAX6M=w400-rw 400w,
+                       https://lh3.googleusercontent.com/d/1u0_cqy50-AfdtT614-AWuCKXm4PpAX6M=w500-rw 500w,
+                       https://lh3.googleusercontent.com/d/1u0_cqy50-AfdtT614-AWuCKXm4PpAX6M=w600-rw 600w,
+                       https://lh3.googleusercontent.com/d/1u0_cqy50-AfdtT614-AWuCKXm4PpAX6M=w800-rw 800w,
+                       https://lh3.googleusercontent.com/d/1u0_cqy50-AfdtT614-AWuCKXm4PpAX6M=w1000-rw 1000w,
+                       https://lh3.googleusercontent.com/d/1u0_cqy50-AfdtT614-AWuCKXm4PpAX6M=w1200-rw 1200w" 
+          imagesizes="(max-width: 640px) 400px, 800px"
           fetchpriority="high" />
 
     <!-- Inline Critical Styles above the fold to eliminate render-blocking CSS delay -->
