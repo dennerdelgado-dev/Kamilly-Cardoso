@@ -1,23 +1,8 @@
-import { useMemo } from "react";
 import { Instagram, Eye, TrendingUp, Sparkles, ChevronDown, Award } from "lucide-react";
 import { kamillyCardoso } from "../data";
 import Image from "./Image";
 
-// ID do Google Drive da imagem hero
-const HERO_DRIVE_ID = "1u0_cqy50-AfdtT614-AWuCKXm4PpAX6M";
-
-function driveUrl(id: string, width: number) {
-  return `https://lh3.googleusercontent.com/d/${id}=w${width}-rw`;
-}
-
 export default function Hero() {
-  const heroSrc = useMemo(() => driveUrl(HERO_DRIVE_ID, 800), []);
-  const heroSrcSet = useMemo(() => [
-    `${driveUrl(HERO_DRIVE_ID, 400)} 400w`,
-    `${driveUrl(HERO_DRIVE_ID, 600)} 600w`,
-    `${driveUrl(HERO_DRIVE_ID, 800)} 800w`,
-  ].join(", "), []);
-
   const handleScrollTo = (id: string) => {
     const el = document.querySelector(id);
     if (el) el.scrollIntoView({ behavior: "smooth" });

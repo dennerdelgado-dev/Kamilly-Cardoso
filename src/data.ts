@@ -282,20 +282,8 @@ const imageMap: Record<string, string> = {
   "/images/metric_interactions.webp": "10wdhqtmBxxLGd6Rz1R0IP95T13NUox9m"
 };
 
-export function getOptimizedImageUrl(url: string, width: number): string {
-  if (!url) return "";
-  
-  const mappedId = imageMap[url];
-  if (mappedId) {
-    return `https://lh3.googleusercontent.com/d/${mappedId}=w${width}-rw`;
-  }
-
-  if (url.includes("lh3.googleusercontent.com/d/")) {
-    const base = url.split("=")[0];
-    return `${base}=w${width}-rw`;
-  }
-  
-  return url;
+export function getOptimizedImageUrl(url: string, _width?: number): string {
+  return url || "";
 }
 
 export default kamillyCardoso;
