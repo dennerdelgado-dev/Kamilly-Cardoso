@@ -12,14 +12,43 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Preload only the high-priority hero image for rapid LCP in optimized WebP/AVIF -->
+    <!-- Preload only the high-priority hero image with matching responsive candidates for rapid LCP -->
     <link rel="preload" as="image" 
           href="https://lh3.googleusercontent.com/d/1u0_cqy50-AfdtT614-AWuCKXm4PpAX6M=w800-rw"
-          imagesrcset="https://lh3.googleusercontent.com/d/1u0_cqy50-AfdtT614-AWuCKXm4PpAX6M=w400-rw 400w,
+          imagesrcset="https://lh3.googleusercontent.com/d/1u0_cqy50-AfdtT614-AWuCKXm4PpAX6M=w200-rw 200w,
+                       https://lh3.googleusercontent.com/d/1u0_cqy50-AfdtT614-AWuCKXm4PpAX6M=w300-rw 300w,
+                       https://lh3.googleusercontent.com/d/1u0_cqy50-AfdtT614-AWuCKXm4PpAX6M=w400-rw 400w,
+                       https://lh3.googleusercontent.com/d/1u0_cqy50-AfdtT614-AWuCKXm4PpAX6M=w500-rw 500w,
                        https://lh3.googleusercontent.com/d/1u0_cqy50-AfdtT614-AWuCKXm4PpAX6M=w600-rw 600w,
-                       https://lh3.googleusercontent.com/d/1u0_cqy50-AfdtT614-AWuCKXm4PpAX6M=w800-rw 800w" 
+                       https://lh3.googleusercontent.com/d/1u0_cqy50-AfdtT614-AWuCKXm4PpAX6M=w800-rw 800w,
+                       https://lh3.googleusercontent.com/d/1u0_cqy50-AfdtT614-AWuCKXm4PpAX6M=w1000-rw 1000w,
+                       https://lh3.googleusercontent.com/d/1u0_cqy50-AfdtT614-AWuCKXm4PpAX6M=w1200-rw 1200w" 
           imagesizes="(max-width: 640px) 400px, 800px"
           fetchpriority="high" />
+
+    <!-- Inline Critical Styles above the fold to eliminate render-blocking CSS delay -->
+    <style>
+      :root {
+        --color-primary-lightpink: #FADADD;
+        --color-primary-nude: #FAF8F7;
+        --color-primary-pink: #f4b4c3;
+        --color-brand-dark: #0A0A0A;
+        --color-brand-card: #111111;
+        --color-brand-border: rgba(255, 255, 255, 0.1);
+      }
+      html, body {
+        background-color: #0A0A0A;
+        color: #FAF8F7;
+        margin: 0;
+        font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+        scroll-behavior: smooth;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+      section {
+        contain: layout style;
+      }
+    </style>
 
     <!-- Google Fonts CDN dynamic high-performance non-render-blocking loading -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
