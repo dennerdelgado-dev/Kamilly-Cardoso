@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { Sparkles, ArrowUpRight } from "lucide-react";
-import { kamillyCardoso } from "../data";
+import { kamillyCardoso, getOptimizedImageUrl } from "../data";
 
 export default function Pillars() {
   const pillars = kamillyCardoso.pillars;
@@ -47,7 +47,7 @@ export default function Pillars() {
               <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/95 via-brand-dark/70 to-black/20 z-10 group-hover:via-brand-dark/65 transition-all duration-300"></div>
                 <img
-                  src={item.image}
+                  src={getOptimizedImageUrl(item.image, 400)}
                   alt={item.title}
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                   referrerPolicy="no-referrer"

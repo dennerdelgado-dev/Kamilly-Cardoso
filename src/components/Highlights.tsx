@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { Instagram, Award, Heart, CheckCircle } from "lucide-react";
-import { kamillyCardoso } from "../data";
+import { kamillyCardoso, getOptimizedImageUrl } from "../data";
 
 export default function Highlights() {
   const instagramUrl = "https://instagram.com/kamilly_cardooso";
@@ -50,7 +50,7 @@ export default function Highlights() {
                   <div className="absolute -inset-1 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 animate-spin-slow opacity-90"></div>
                   <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full p-1 bg-black overflow-hidden">
                     <img 
-                      src="https://lh3.googleusercontent.com/d/14O2kGUjFkTZ_gk0zO5hJbXjmPCx3XcTE" 
+                      src={getOptimizedImageUrl("https://lh3.googleusercontent.com/d/14O2kGUjFkTZ_gk0zO5hJbXjmPCx3XcTE", 180)} 
                       alt="@kamilly_cardooso Avatar" 
                       className="w-full h-full object-cover rounded-full"
                       referrerPolicy="no-referrer"

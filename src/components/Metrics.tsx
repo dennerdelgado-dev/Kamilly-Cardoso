@@ -15,7 +15,7 @@ import {
   Sparkles, 
   ArrowUpRight 
 } from "lucide-react";
-import { kamillyCardoso } from "../data";
+import { kamillyCardoso, getOptimizedImageUrl } from "../data";
 
 export default function Metrics() {
   const { metrics } = kamillyCardoso;
@@ -300,7 +300,7 @@ export default function Metrics() {
                     className="w-full h-full p-1"
                   >
                     <img
-                      src={currentProof.screenshot}
+                      src={getOptimizedImageUrl(currentProof.screenshot, 450)}
                       alt={`Relatório de ${currentProof.title}`}
                       className="w-full h-full object-cover object-top select-none pointer-events-none rounded-[32px] pt-12 pb-4"
                       referrerPolicy="no-referrer"
@@ -354,7 +354,7 @@ export default function Metrics() {
                 </div>
 
                 <img
-                  src={item.screenshot}
+                  src={getOptimizedImageUrl(item.screenshot, 250)}
                   alt={`Galeria Mini ${item.title}`}
                   className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   referrerPolicy="no-referrer"
@@ -403,7 +403,7 @@ export default function Metrics() {
               {/* Left Column: The Large detailed visual panel */}
               <div className="flex-1 bg-zinc-950 p-4 sm:p-6 flex items-center justify-center overflow-y-auto max-h-[50vh] md:max-h-none md:h-[750px]">
                 <img
-                  src={lightboxImage || ""}
+                  src={getOptimizedImageUrl(lightboxImage || "", 1000)}
                   alt={`Comprovação de ${lightboxTitle}`}
                   className="max-h-full max-w-full object-contain rounded-xl select-none"
                   referrerPolicy="no-referrer"

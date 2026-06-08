@@ -263,4 +263,14 @@ export const kamillyCardoso = {
     }
   ]
 };
+
+export function getOptimizedImageUrl(url: string, width: number): string {
+  if (!url) return "";
+  if (url.includes("lh3.googleusercontent.com/d/")) {
+    const base = url.split("=")[0];
+    return `${base}=w${width}`;
+  }
+  return url;
+}
+
 export default kamillyCardoso;

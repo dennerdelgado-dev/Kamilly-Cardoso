@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { Instagram, Eye, TrendingUp, MapPin, Sparkles, ChevronDown, Award } from "lucide-react";
-import { kamillyCardoso } from "../data";
+import { kamillyCardoso, getOptimizedImageUrl } from "../data";
 
 // Animated counter hook
 function CountUp({ end, duration = 2000, suffix = "" }: { end: number; duration?: number; suffix?: string }) {
@@ -140,7 +140,7 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-tr from-primary-pink/10 via-transparent to-primary-lightpink/5 z-10 pointer-events-none"></div>
               
               <img
-                src="https://lh3.googleusercontent.com/d/1vJL5pC87_vvMZdkGy48Dp5QJJIlOxiXm"
+                src={getOptimizedImageUrl("https://lh3.googleusercontent.com/d/1vJL5pC87_vvMZdkGy48Dp5QJJIlOxiXm", 800)}
                 alt="Kamilly Cardoso Digital Influencer"
                 className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700 ease-out"
                 referrerPolicy="no-referrer"
