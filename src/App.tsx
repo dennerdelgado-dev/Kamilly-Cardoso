@@ -1,16 +1,18 @@
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import About from "./components/About";
-import Pillars from "./components/Pillars";
-import Metrics from "./components/Metrics";
-import Demographics from "./components/Demographics";
-import Highlights from "./components/Highlights";
-import Differentials from "./components/Differentials";
 import Brands from "./components/Brands";
-import Packages from "./components/Packages";
-import Contact from "./components/Contact";
-import FloatingActions from "./components/FloatingActions";
+
+// Lazy-loaded components below the fold for optimal mobile performance and minimal bundle size
+const About = lazy(() => import("./components/About"));
+const Pillars = lazy(() => import("./components/Pillars"));
+const Metrics = lazy(() => import("./components/Metrics"));
+const Demographics = lazy(() => import("./components/Demographics"));
+const Highlights = lazy(() => import("./components/Highlights"));
+const Differentials = lazy(() => import("./components/Differentials"));
+const Packages = lazy(() => import("./components/Packages"));
+const Contact = lazy(() => import("./components/Contact"));
+const FloatingActions = lazy(() => import("./components/FloatingActions"));
 
 export default function App() {
   // Sync state between selected pricing packages and the pre-filled contact form
@@ -40,31 +42,49 @@ export default function App() {
         <Brands />
 
         {/* Detailed Professional About Block */}
-        <About />
+        <Suspense fallback={<div className="min-h-[500px]" />}>
+          <About />
+        </Suspense>
 
         {/* Core Content Pillar Categories */}
-        <Pillars />
+        <Suspense fallback={<div className="min-h-[700px]" />}>
+          <Pillars />
+        </Suspense>
 
         {/* Key Metrics Board Dashboard */}
-        <Metrics />
+        <Suspense fallback={<div className="min-h-[800px]" />}>
+          <Metrics />
+        </Suspense>
 
         {/* Verified Demographics Split Grid */}
-        <Demographics />
+        <Suspense fallback={<div className="min-h-[600px]" />}>
+          <Demographics />
+        </Suspense>
 
         {/* Instagram Spotlight Highlight Section */}
-        <Highlights />
+        <Suspense fallback={<div className="min-h-[600px]" />}>
+          <Highlights />
+        </Suspense>
 
         {/* Core Bento Differentials Grid */}
-        <Differentials />
+        <Suspense fallback={<div className="min-h-[600px]" />}>
+          <Differentials />
+        </Suspense>
 
         {/* Collaboration Pricing Packages with dynamic proposal estimator */}
-        <Packages onSelectPackages={handleSelectPackages} />
+        <Suspense fallback={<div className="min-h-[800px]" />}>
+          <Packages onSelectPackages={handleSelectPackages} />
+        </Suspense>
 
         {/* Contact Input Forms Grid */}
-        <Contact prefilledPackages={selectedPacks} prefilledTotal={prefilledTotal} />
+        <Suspense fallback={<div className="min-h-[650px]" />}>
+          <Contact prefilledPackages={selectedPacks} prefilledTotal={prefilledTotal} />
+        </Suspense>
 
         {/* Floating Utilities */}
-        <FloatingActions />
+        <Suspense fallback={null}>
+          <FloatingActions />
+        </Suspense>
 
         {/* Footer layout: Minimal unbranded matching exact copyright requirement */}
         <footer className="w-full bg-brand-dark border-t border-brand-border/40 py-12 mt-auto">

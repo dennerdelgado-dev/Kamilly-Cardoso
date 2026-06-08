@@ -1,27 +1,5 @@
-import { useEffect, useState } from "react";
-import { motion } from "motion/react";
-import { Instagram, Eye, TrendingUp, MapPin, Sparkles, ChevronDown, Award } from "lucide-react";
+import { Instagram, Eye, TrendingUp, Sparkles, ChevronDown, Award } from "lucide-react";
 import { kamillyCardoso, getOptimizedImageUrl } from "../data";
-
-// Animated counter hook
-function CountUp({ end, duration = 2000, suffix = "" }: { end: number; duration?: number; suffix?: string }) {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    let startTime: number | null = null;
-    const animate = (timestamp: number) => {
-      if (!startTime) startTime = timestamp;
-      const progress = Math.min((timestamp - startTime) / duration, 1);
-      setCount(Math.floor(progress * end));
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      }
-    };
-    requestAnimationFrame(animate);
-  }, [end, duration]);
-
-  return <span>{count.toLocaleString('pt-BR')}{suffix}</span>;
-}
 
 export default function Hero() {
   const handleScrollTo = (id: string) => {
@@ -40,56 +18,31 @@ export default function Hero() {
         <div className="lg:col-span-7 flex flex-col justify-center space-y-8 text-left">
           
           {/* Location & Title Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-block self-start px-3 py-1 bg-primary-lightpink/10 text-primary-lightpink border border-primary-lightpink/20 rounded-full text-[10px] uppercase tracking-widest"
-          >
+          <div className="inline-block self-start px-3 py-1 bg-primary-lightpink/10 text-primary-lightpink border border-primary-lightpink/20 rounded-full text-[10px] uppercase tracking-widest">
             Lifestyle & Beauty Creator • {kamillyCardoso.location}
-          </motion.div>
+          </div>
 
           {/* Headline and Tagline */}
           <div className="space-y-4">
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="font-serif text-6xl sm:text-7xl lg:text-8xl font-normal leading-[0.95] text-white tracking-tighter"
-            >
+            <h1 className="font-serif text-6xl sm:text-7xl lg:text-8xl font-normal leading-[0.95] text-white tracking-tighter">
               Kamilly<br />
               <span className="italic text-primary-lightpink">
                 Cardoso
               </span>
-            </motion.h1>
+            </h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xs sm:text-sm font-medium tracking-[0.2em] text-primary-lightpink uppercase"
-            >
+            <p className="text-xs sm:text-sm font-medium tracking-[0.2em] text-primary-lightpink uppercase">
               {kamillyCardoso.tagline}
-            </motion.p>
+            </p>
           </div>
 
           {/* Supporting Copy */}
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-gray-300 text-lg sm:text-xl font-light leading-relaxed max-w-xl"
-          >
+          <p className="text-gray-300 text-lg sm:text-xl font-light leading-relaxed max-w-xl">
             {kamillyCardoso.mainPhrase}
-          </motion.p>
+          </p>
 
           {/* Core Action Call buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-[1] flex-col sm:flex-row gap-4 pt-4"
-          >
+          <div className="flex flex-[1] flex-col sm:flex-row gap-4 pt-4">
             {/* Primary Business Button */}
             <button
               onClick={() => handleScrollTo("#contato")}
@@ -120,17 +73,12 @@ export default function Hero() {
               <span>Estatísticas</span>
               <ChevronDown size={13} className="group-hover:translate-y-1 transition-transform animate-bounce" />
             </button>
-          </motion.div>
+          </div>
         </div>
 
         {/* Right Side: Showcase Frame with Kamilly Cardoso Profile */}
         <div className="lg:col-span-5 relative mt-8 lg:mt-0">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="relative mx-auto w-full max-w-[400px] h-[520px] rounded-3xl overflow-hidden shadow-2xl p-2 bg-gradient-to-br from-brand-border via-brand-border/20 to-primary-lightpink/20 border border-brand-border/40"
-          >
+          <div className="relative mx-auto w-full max-w-[400px] h-[520px] rounded-3xl overflow-hidden shadow-2xl p-2 bg-gradient-to-br from-brand-border via-brand-border/20 to-primary-lightpink/20 border border-brand-border/40">
             {/* Outer high-end glass border overlay */}
             <div className="absolute inset-0 rounded-3xl pointer-events-none border-[1.5px] border-primary-lightpink/20 z-20"></div>
 
@@ -141,6 +89,12 @@ export default function Hero() {
               
               <img
                 src={getOptimizedImageUrl("/images/hero.webp", 800)}
+                srcSet={`
+                  ${getOptimizedImageUrl("/images/hero.webp", 400)} 400w,
+                  ${getOptimizedImageUrl("/images/hero.webp", 600)} 600w,
+                  ${getOptimizedImageUrl("/images/hero.webp", 800)} 800w
+                `}
+                sizes="(max-width: 640px) 400px, 800px"
                 alt="Kamilly Cardoso Digital Influencer"
                 className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700 ease-out"
                 fetchPriority="high"
@@ -172,7 +126,7 @@ export default function Hero() {
                 </span>
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -203,7 +157,7 @@ export default function Hero() {
             <div className="flex flex-col items-center text-center justify-center pt-4 md:pt-0">
               <span className="text-2xl sm:text-3xl font-mono font-bold text-white tracking-tight flex items-center justify-center text-gradient-pink">
                 <Eye size={18} className="text-primary-lightpink mr-1.5 shrink-0" />
-                <CountUp end={21} suffix="" />,<CountUp end={7} suffix="M" duration={1500} />
+                <span>21,7M</span>
               </span>
               <span className="text-xs uppercase tracking-widest text-gray-400 mt-1">Visualizações (30D)</span>
             </div>
@@ -212,7 +166,7 @@ export default function Hero() {
             <div className="flex flex-col items-center text-center justify-center pt-4 md:pt-0">
               <span className="text-2xl sm:text-3xl font-mono font-bold text-white tracking-tight flex items-center justify-center">
                 <TrendingUp size={18} className="text-primary-lightpink mr-1.5 shrink-0" />
-                <span>+<CountUp end={7} suffix="M" duration={1000} /></span>
+                <span>+7M</span>
               </span>
               <span className="text-xs uppercase tracking-widest text-gray-400 mt-1">Contas Alcançadas</span>
             </div>

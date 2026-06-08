@@ -44,6 +44,11 @@ export default function About() {
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/40 to-transparent"></div>
                   <img
                     src={getOptimizedImageUrl("/images/about.webp", 500)}
+                    srcSet={`
+                      ${getOptimizedImageUrl("/images/about.webp", 300)} 300w,
+                      ${getOptimizedImageUrl("/images/about.webp", 500)} 500w
+                    `}
+                    sizes="(max-width: 640px) 300px, 500px"
                     alt="Kamilly Cardoso Lifestyle and Skincare Aesthetic representation"
                     className="w-full h-full object-cover object-center"
                     loading="lazy"
