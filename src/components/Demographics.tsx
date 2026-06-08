@@ -46,7 +46,7 @@ export default function Demographics() {
                 </span>
               </div>
 
-              <h4 className="font-serif text-2xl font-bold text-white mb-2">Presença Feminina Recorde</h4>
+              <h3 className="font-serif text-2xl font-bold text-white mb-2">Presença Feminina Recorde</h3>
               <p className="text-xs text-gray-400 font-normal leading-relaxed mb-8">
                 Alinhamento absoluto com marcas de maquiagem, skincare, moda e autocuidado doméstico capilar.
               </p>
@@ -80,7 +80,7 @@ export default function Demographics() {
             </div>
 
             <div className="pt-6 mt-6 border-t border-brand-border/30">
-              <span className="text-[10px] text-gray-500 font-mono uppercase tracking-widest block">Nicho Altamente Responsivo</span>
+              <span className="text-[10px] text-gray-400 font-mono uppercase tracking-widest block">Nicho Altamente Responsivo</span>
             </div>
           </motion.div>
 
@@ -100,7 +100,7 @@ export default function Demographics() {
                 </span>
               </div>
 
-              <h4 className="font-serif text-2xl font-bold text-white mb-2">Principais Consumidores</h4>
+              <h3 className="font-serif text-2xl font-bold text-white mb-2">Principais Consumidores</h3>
               <p className="text-xs text-gray-400 font-normal leading-relaxed mb-8">
                 Mais de 54% da audiência possui entre 18 e 34 anos de idade. Jovens adultos tomadores de decisão em compras online.
               </p>
@@ -147,7 +147,7 @@ export default function Demographics() {
                 </span>
               </div>
 
-              <h4 className="font-serif text-2xl font-bold text-white mb-2">Principais Cidades</h4>
+              <h3 className="font-serif text-2xl font-bold text-white mb-2">Principais Cidades</h3>
               <p className="text-xs text-gray-400 font-normal leading-relaxed mb-6">
                 Foco concentrado nos maiores polos econômicos do país (SP, RJ e ES), garantindo alta taxa de conversão e logística rápida para e-commerces.
               </p>

@@ -170,7 +170,7 @@ export default function Metrics() {
                   >
                     {/* Top corner minimal icon indicator */}
                     <div className="flex items-center justify-between mb-3 relative z-10">
-                      <span className="text-[10px] font-mono uppercase tracking-widest text-gray-500 group-hover:text-gray-400 font-semibold">
+                      <span className="text-[10px] font-mono uppercase tracking-widest text-gray-400 group-hover:text-gray-300 font-semibold">
                         {proof.subtext}
                       </span>
                       <div className={`w-8 h-8 rounded-lg ${IsActive ? "bg-white/10 text-white" : "bg-white/[0.03] text-primary-lightpink/70"} flex items-center justify-center transition-colors duration-300`}>
@@ -192,7 +192,7 @@ export default function Metrics() {
 
                     {/* Highly discreet "Click to preview" flag */}
                     <div className="mt-4 flex items-center justify-between pointer-events-none relative z-10">
-                      <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full bg-white/[0.03] border border-white/5 text-[9px] text-gray-400 uppercase font-mono tracking-widest">
+                      <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full bg-white/[0.03] border border-white/5 text-[9px] text-gray-300 uppercase font-mono tracking-widest">
                         {IsActive ? "Ativo no Mockup ✓" : "Ver Comprovação 👁"}
                       </span>
                       <span className="text-[10px] text-primary-lightpink opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-mono">
@@ -227,7 +227,7 @@ export default function Metrics() {
               {/* ROI block detailing how advertiser benefits from the active metric */}
               <div className="mt-5 pt-5 border-t border-white/[0.05] flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white/[0.01] p-3.5 rounded-xl">
                 <div className="space-y-0.5">
-                  <span className="text-[9px] text-gray-500 uppercase font-mono tracking-widest block font-bold">Retorno para o Anunciante (ROI)</span>
+                  <span className="text-[9px] text-gray-300 uppercase font-mono tracking-widest block font-bold">Retorno para o Anunciante (ROI)</span>
                   <span className="text-xs text-white leading-normal font-medium block">
                     ⚡ {currentProof.roiDetail}
                   </span>
@@ -430,7 +430,7 @@ export default function Metrics() {
                   </p>
 
                   <div className="space-y-2.5 pt-3">
-                    <span className="text-[10px] text-gray-500 font-mono uppercase tracking-widest block font-bold">Compromisso do Criador</span>
+                    <span className="text-[10px] text-gray-400 font-mono uppercase tracking-widest block font-bold">Compromisso do Criador</span>
                     <div className="space-y-1.5">
                       <div className="flex items-center space-x-1.5 text-xs text-zinc-300">
                         <span className="w-1.5 h-1.5 rounded-full bg-zinc-500"></span>

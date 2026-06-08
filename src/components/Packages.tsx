@@ -178,7 +178,7 @@ export default function Packages({ onSelectPackages }: PackagesProps) {
               <div className="w-full lg:w-auto flex flex-col sm:flex-row items-center gap-6 lg:justify-end">
                 <div className="text-center sm:text-right space-y-1">
                   {discount > 0 && (
-                    <span className="text-xs text-gray-500 line-through block font-mono">
+                    <span className="text-xs text-gray-400 line-through block font-mono">
                       Subtotal: R$ {subtotal.toLocaleString("pt-BR")}
                     </span>
                   )}

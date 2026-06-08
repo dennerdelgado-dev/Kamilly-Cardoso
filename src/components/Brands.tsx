@@ -25,10 +25,10 @@ export default function Brands() {
         
         {/* Title Header */}
         <div className="text-center space-y-2 mb-10">
-          <p className="text-[11px] uppercase tracking-[0.25em] font-medium text-pink-300/60 font-mono">PARCERIAS DE SUCESSO</p>
-          <h3 className="font-serif text-3xl tracking-wide font-light text-white">
+          <p className="text-[11px] uppercase tracking-[0.25em] font-medium text-pink-300 font-mono">PARCERIAS DE SUCESSO</p>
+          <h2 className="font-serif text-3xl tracking-wide font-light text-white">
             Marcas que <span className="italic text-primary-lightpink">já confiaram no meu trabalho</span>
-          </h3>
+          </h2>
         </div>
 
         {/* Minimalist interactive @ handles list */}

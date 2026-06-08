@@ -57,7 +57,7 @@ export default function Contact({ prefilledPackages, prefilledTotal }: ContactPr
             </div>
 
             <div className="space-y-2">
-              <span className="text-[11px] uppercase tracking-[0.25em] text-gray-500 font-mono font-bold">E-mail de Assessoria</span>
+              <span className="text-[11px] uppercase tracking-[0.25em] text-gray-400 font-mono font-bold">E-mail de Assessoria</span>
               <a 
                 href={`mailto:${kamillyCardoso.email}`}
                 className="block text-2xl sm:text-4xl font-serif italic text-white hover:text-primary-lightpink transition-colors duration-300 break-all py-1"
@@ -112,7 +112,7 @@ export default function Contact({ prefilledPackages, prefilledTotal }: ContactPr
               <Instagram size={20} />
             </div>
             <div>
-              <span className="text-[10px] uppercase font-mono tracking-widest text-gray-500 font-semibold block">Instagram Oficial</span>
+              <span className="text-[10px] uppercase font-mono tracking-widest text-gray-400 font-semibold block">Instagram Oficial</span>
               <span className="text-sm font-semibold text-white tracking-wide">{kamillyCardoso.instagramHandle}</span>
             </div>
           </a>
@@ -123,7 +123,7 @@ export default function Contact({ prefilledPackages, prefilledTotal }: ContactPr
               <Award size={20} />
             </div>
             <div>
-              <span className="text-[10px] uppercase font-mono tracking-widest text-gray-500 font-semibold block">Tempo de Resposta</span>
+              <span className="text-[10px] uppercase font-mono tracking-widest text-gray-400 font-semibold block">Tempo de Resposta</span>
               <span className="text-sm font-semibold text-white tracking-wide">&lt; 12 horas úteis</span>
             </div>
           </div>

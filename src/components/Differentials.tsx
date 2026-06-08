@@ -63,7 +63,7 @@ export default function Differentials() {
             </div>
 
             {/* Micro aesthetic element inside card */}
-            <div className="mt-8 pt-6 border-t border-brand-border/30 flex justify-between items-center text-xs text-gray-500 font-mono">
+            <div className="mt-8 pt-6 border-t border-brand-border/30 flex justify-between items-center text-xs text-gray-400 font-mono">
               <span>ALCANCE INTEGRAL</span>
               <span className="text-primary-pink">21.7M+ Impressões Ativas</span>
             </div>
@@ -91,7 +91,7 @@ export default function Differentials() {
               </div>
             </div>
 
-            <div className="mt-8 pt-6 border-t border-brand-border/30 flex justify-between items-center text-[10px] text-gray-500 font-mono">
+            <div className="mt-8 pt-6 border-t border-brand-border/30 flex justify-between items-center text-[10px] text-gray-400 font-mono">
               <span>RETENÇÃO</span>
               <span className="text-rose-300">Comunidade Ativa</span>
             </div>
@@ -119,7 +119,7 @@ export default function Differentials() {
               </div>
             </div>
 
-            <div className="mt-8 pt-6 border-t border-brand-border/30 flex justify-between items-center text-[10px] text-gray-500 font-mono">
+            <div className="mt-8 pt-6 border-t border-brand-border/30 flex justify-between items-center text-[10px] text-gray-400 font-mono">
               <span>VIRALIZAÇÃO</span>
               <span className="text-emerald-300">Algoritmo Amigável</span>
             </div>
@@ -148,7 +148,7 @@ export default function Differentials() {
               </div>
             </div>
 
-            <div className="mt-8 pt-6 border-t border-brand-border/30 flex justify-between items-center text-xs text-gray-500 font-mono">
+            <div className="mt-8 pt-6 border-t border-brand-border/30 flex justify-between items-center text-xs text-gray-400 font-mono">
               <span>CONVERSÃO DE PRODUTO</span>
               <span className="text-primary-pink">Especialista em Shopee e SHEIN</span>
             </div>
@@ -176,7 +176,7 @@ export default function Differentials() {
               </div>
             </div>
 
-            <div className="mt-8 pt-6 border-t border-brand-border/30 flex justify-between items-center text-[10px] text-gray-500 font-mono">
+            <div className="mt-8 pt-6 border-t border-brand-border/30 flex justify-between items-center text-[10px] text-gray-400 font-mono">
               <span>DELIVERABLES</span>
               <span className="text-primary-pink">Gravações 4K Estéticas</span>
             </div>
@@ -204,7 +204,7 @@ export default function Differentials() {
               </div>
             </div>
 
-            <div className="mt-8 pt-6 border-t border-brand-border/30 flex justify-between items-center text-[10px] text-gray-500 font-mono">
+            <div className="mt-8 pt-6 border-t border-brand-border/30 flex justify-between items-center text-[10px] text-gray-400 font-mono">
               <span>DEMOGRAFIA ATIVA</span>
               <span className="text-sky-300">Alta Densidade Feminina</span>
             </div>
