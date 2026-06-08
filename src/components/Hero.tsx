@@ -1,22 +1,12 @@
-import { useMemo } from "react";
 import { Instagram, Eye, TrendingUp, Sparkles, ChevronDown, Award } from "lucide-react";
 import { kamillyCardoso } from "../data";
 
-// Google Drive image ID for hero
-const HERO_DRIVE_ID = "1u0_cqy50-AfdtT614-AWuCKXm4PpAX6M";
-
-function driveUrl(id: string, width: number) {
-  return `https://lh3.googleusercontent.com/d/${id}=w${width}-rw`;
-}
+// Local image path — served directly from Vercel CDN
+const HERO_IMAGE = "/images/herói.webp";
 
 export default function Hero() {
-  // Pre-compute URLs once at module level — avoids forced reflow during render
-  const heroSrc    = useMemo(() => driveUrl(HERO_DRIVE_ID, 800), []);
-  const heroSrcSet = useMemo(() => [
-    `${driveUrl(HERO_DRIVE_ID, 400)} 400w`,
-    `${driveUrl(HERO_DRIVE_ID, 600)} 600w`,
-    `${driveUrl(HERO_DRIVE_ID, 800)} 800w`,
-  ].join(", "), []);
+  const heroSrc    = HERO_IMAGE;
+  const heroSrcSet = undefined; // single local file, no srcset needed
 
   const handleScrollTo = (id: string) => {
     document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
