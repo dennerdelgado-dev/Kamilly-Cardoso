@@ -29,12 +29,12 @@ export const kamillyCardoso = {
   ],
 
   pillars: [
-    { title: "Cabelos", description: "Tutoriais de finalização, rotinas de saúde dos fios, cronograma capilar e resenhas de produtos que viram febre.", image: "/images/pilares_cabelos.webp" },
-    { title: "Beleza", description: "Skincare simplificado, maquiagens para o dia a dia e avaliações honestas de lançamentos de cosméticos.", image: "/images/pilares_beleza.webp" },
-    { title: "Moda", description: "Provadores interativos, combinação de looks fáceis de reproduzir e inspirações de outfits modernos e casuais.", image: "/images/pilares_moda.webp" },
-    { title: "Lifestyle", description: "Rotina criativa, hábitos saudáveis, vlogs estéticos de um dia comum e bem-estar de forma leve.", image: "/images/pilares_estilo_de_vida.webp" },
-    { title: "Achadinhos", description: "Indicações dos melhores produtos das principais plataformas (Shopee, SHEIN e Mercado Livre) testados e aprovados.", image: "/images/pilares_achadinhos.webp" },
-    { title: "Produtos Virais", description: "Testes práticos de itens que estão bombando nas redes sociais, validando sua eficácia e custo-benefício.", image: "/images/pilares_virais.webp" }
+    { title: "Cabelos", description: "Tutoriais de finalização, rotinas de saúde dos fios, cronograma capilar e resenhas de produtos que viram febre.", image: "/images/pillars_cabelos.webp" },
+    { title: "Beleza", description: "Skincare simplificado, maquiagens para o dia a dia e avaliações honestas de lançamentos de cosméticos.", image: "/images/pillars_beleza.webp" },
+    { title: "Moda", description: "Provadores interativos, combinação de looks fáceis de reproduzir e inspirações de outfits modernos e casuais.", image: "/images/pillars_moda.webp" },
+    { title: "Lifestyle", description: "Rotina criativa, hábitos saudáveis, vlogs estéticos de um dia comum e bem-estar de forma leve.", image: "/images/pillars_lifestyle.webp" },
+    { title: "Achadinhos", description: "Indicações dos melhores produtos das principais plataformas (Shopee, SHEIN e Mercado Livre) testados e aprovados.", image: "/images/pillars_achadinhos.webp" },
+    { title: "Produtos Virais", description: "Testes práticos de itens que estão bombando nas redes sociais, validando sua eficácia e custo-benefício.", image: "/images/pillars_virais.webp" }
   ],
 
   metrics: {
@@ -82,12 +82,12 @@ export const kamillyCardoso = {
   ],
 
   brands: [
-    { name: "@madufitnes", logo: "/images/marca_madufitnes.webp", url: "https://instagram.com/madufitnes" },
-    { name: "Shopee", logo: "/images/marca_shopee.webp", url: "https://shopee.com.br" },
-    { name: "SHEIN", logo: "/images/marca_shein.webp", url: "https://br.shein.com" },
-    { name: "Mercado Livre", logo: "/images/marca_mercadolivre.webp", url: "https://www.mercadolivre.com.br" },
-    { name: "AliExpress", logo: "/images/marca_aliexpress.webp", url: "https://pt.aliexpress.com" },
-    { name: "Essendy", logo: "/images/marca_essendy.webp", url: "https://www.essendy.com.br" }
+    { name: "@madufitnes", logo: "/images/brand_madufitnes.webp", url: "https://instagram.com/madufitnes" },
+    { name: "Shopee", logo: "/images/brand_shopee.webp", url: "https://shopee.com.br" },
+    { name: "SHEIN", logo: "/images/brand_shein.webp", url: "https://br.shein.com" },
+    { name: "Mercado Livre", logo: "/images/brand_mercadolivre.webp", url: "https://www.mercadolivre.com.br" },
+    { name: "AliExpress", logo: "/images/brand_aliexpress.webp", url: "https://pt.aliexpress.com" },
+    { name: "Essendy", logo: "/images/brand_essendy.webp", url: "https://www.essendy.com.br" }
   ],
 
   differentials: [
