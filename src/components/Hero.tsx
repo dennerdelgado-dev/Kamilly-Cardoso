@@ -140,7 +140,7 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-tr from-primary-pink/10 via-transparent to-primary-lightpink/5 z-10 pointer-events-none"></div>
               
               <img
-                src={getOptimizedImageUrl("https://lh3.googleusercontent.com/d/1vJL5pC87_vvMZdkGy48Dp5QJJIlOxiXm", 800)}
+                src={getOptimizedImageUrl("/images/hero.webp", 800)}
                 alt="Kamilly Cardoso Digital Influencer"
                 className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700 ease-out"
                 referrerPolicy="no-referrer"

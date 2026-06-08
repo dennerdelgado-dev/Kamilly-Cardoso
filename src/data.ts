@@ -34,32 +34,32 @@ export const kamillyCardoso = {
     { 
       title: "Cabelos", 
       description: "Tutoriais de finalização, rotinas de saúde dos fios, cronograma capilar e resenhas de produtos que viram febre.",
-      image: "https://lh3.googleusercontent.com/d/1g4Uj1kwjhQbd0rvkdHEnDhHuSPAjyJd6" 
+      image: "/images/pillars_cabelos.webp" 
     },
     { 
       title: "Beleza", 
       description: "Skincare simplificado, maquiagens para o dia a dia e avaliações honestas de lançamentos de cosméticos.",
-      image: "https://lh3.googleusercontent.com/d/1A1qZCrenluvklvua3BJh2vnSdf9kQazU" 
+      image: "/images/pillars_beleza.webp" 
     },
     { 
       title: "Moda", 
       description: "Provadores interativos, combinação de looks fáceis de reproduzir e inspirações de outfits modernos e casuais.",
-      image: "https://lh3.googleusercontent.com/d/11QQGywY7hfZv0nmY2ccYQ0xXqJSo-Dnu" 
+      image: "/images/pillars_moda.webp" 
     },
     { 
       title: "Lifestyle", 
       description: "Rotina criativa, hábitos saudáveis, vlogs estéticos de um dia comum e bem-estar de forma leve.",
-      image: "https://lh3.googleusercontent.com/d/1QjzlB3zy-sHfHC4Jgo-D2deXwgd9QZv5" 
+      image: "/images/pillars_lifestyle.webp" 
     },
     { 
       title: "Achadinhos", 
       description: "Indicações dos melhores produtos das principais plataformas (Shopee, SHEIN e Mercado Livre) testados e aprovados.",
-      image: "https://lh3.googleusercontent.com/d/1FRXlMnAqVhx_xoS-J9cN5keBNJ2NH0f_" 
+      image: "/images/pillars_achadinhos.webp" 
     },
     { 
       title: "Produtos Virais", 
       description: "Testes práticos de itens que estão bombando nas redes sociais, validando sua eficácia e custo-benefício.",
-      image: "https://lh3.googleusercontent.com/d/1oSS3qlgL3jaGQLRG12HLkXlVa5xmeuqh" 
+      image: "/images/pillars_virais.webp" 
     }
   ],
 
@@ -140,12 +140,12 @@ export const kamillyCardoso = {
 
   // Client trust signals
   brands: [
-    { name: "@madufitnes", logo: "https://lh3.googleusercontent.com/d/1oSqM-3_FZoySCHyrZYCD96iH2FAOqo-4", url: "https://instagram.com/madufitnes" },
-    { name: "Shopee", logo: "https://lh3.googleusercontent.com/d/1X8mx64Wi02yVuxLeLmO6YmEQ_OnCp8Ga", url: "https://shopee.com.br" },
-    { name: "SHEIN", logo: "https://lh3.googleusercontent.com/d/1SJ-cvmki06rx-C8lq08ZQporDzkAGG-9", url: "https://br.shein.com" },
-    { name: "Mercado Livre", logo: "https://lh3.googleusercontent.com/d/1T8Mr_xwJyOVJrZoz8AyY_0Xkt7OG_SDC", url: "https://www.mercadolivre.com.br" },
-    { name: "AliExpress", logo: "https://lh3.googleusercontent.com/d/1c98gwbKjeWyo6RGZ8sdlE0b3L91nDXlZ", url: "https://pt.aliexpress.com" },
-    { name: "Essendy", logo: "https://lh3.googleusercontent.com/d/1_6txgcfG-6iuTBAELD3I9JtfqODaD28N", url: "https://www.essendy.com.br" }
+    { name: "@madufitnes", logo: "/images/brand_madufitnes.webp", url: "https://instagram.com/madufitnes" },
+    { name: "Shopee", logo: "/images/brand_shopee.webp", url: "https://shopee.com.br" },
+    { name: "SHEIN", logo: "/images/brand_shein.webp", url: "https://br.shein.com" },
+    { name: "Mercado Livre", logo: "/images/brand_mercadolivre.webp", url: "https://www.mercadolivre.com.br" },
+    { name: "AliExpress", logo: "/images/brand_aliexpress.webp", url: "https://pt.aliexpress.com" },
+    { name: "Essendy", logo: "/images/brand_essendy.webp", url: "https://www.essendy.com.br" }
   ],
 
   // Differentials
@@ -266,10 +266,7 @@ export const kamillyCardoso = {
 
 export function getOptimizedImageUrl(url: string, width: number): string {
   if (!url) return "";
-  if (url.includes("lh3.googleusercontent.com/d/")) {
-    const base = url.split("=")[0];
-    return `${base}=w${width}`;
-  }
+  // Since all images are local optimized WebP formats (already scaled & compressed), we serve them directly
   return url;
 }
 

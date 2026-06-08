@@ -43,7 +43,7 @@ export default function About() {
                 <div className="relative w-full h-full rounded-xl overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/40 to-transparent"></div>
                   <img
-                    src={getOptimizedImageUrl("https://lh3.googleusercontent.com/d/15kPXoKMln7K04WXgHtV-WaRC15_KSl8A", 500)}
+                    src={getOptimizedImageUrl("/images/about.webp", 500)}
                     alt="Kamilly Cardoso Lifestyle and Skincare Aesthetic representation"
                     className="w-full h-full object-cover object-center"
                     referrerPolicy="no-referrer"
