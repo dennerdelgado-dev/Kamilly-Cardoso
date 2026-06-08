@@ -30,7 +30,7 @@ export default function Metrics() {
       value: metrics.reachedAccounts,
       subtext: "Últimos 30 dias",
       description: "Alcance orgânico massivo de mais de 7 Milhões de contas únicas. Uma capacidade extraordinária de distribuição viral que supera grandes veículos de mídia.",
-      screenshot: "https://lh3.googleusercontent.com/d/1lbmldzCicwDylDOkf4Uc35zS6UqvhkkV",
+      screenshot: "/images/metric_reach.webp",
       icon: Target,
       highlightBadge: "7.0M Alcançados",
       roiDetail: "Ideal para marcas que buscam awareness de escala nacional e atração contínua de novas clientes.",
@@ -44,7 +44,7 @@ export default function Metrics() {
       value: metrics.totalViews,
       subtext: "Total Acumulado (30D)",
       description: "Mais de 21 Milhões de visualizações nos vídeos de Reels e TikTok. Conteúdo viciante que retém a audiência e maximiza a fixação das marcas de forma leve e estética.",
-      screenshot: "https://lh3.googleusercontent.com/d/19-wtAmnMIY2_eESJwC5MyMieVDqBv5L2",
+      screenshot: "/images/metric_views.webp",
       icon: TrendingUp,
       highlightBadge: "21.7M de Views",
       roiDetail: "Garante visualizações duradouras, impulsionando posts no carrossel de descoberta por dias.",
@@ -58,7 +58,7 @@ export default function Metrics() {
       value: metrics.newFollowers,
       subtext: "Novos Seguidores",
       description: "Fluxo diário de novos seguidores espontâneos e apaixonados por beleza e rotinas saudáveis de cuidados, prontos para consumir novas indicações.",
-      screenshot: "https://lh3.googleusercontent.com/d/1s5pXtKw5FEmB0pb9TDQ8U_uMCYG2qw5O",
+      screenshot: "/images/metric_growth.webp",
       icon: Users,
       highlightBadge: "+8.1K Seguidores",
       roiDetail: "Comunidade extremamente ativa, em expansão acelerada, gerando engajamento ultra-receptivo.",
@@ -72,7 +72,7 @@ export default function Metrics() {
       value: metrics.profileVisits,
       subtext: "Impulsos de Ação (30D)",
       description: "Mais de 42 mil visitas orgânicas ao perfil. Isso comprova que a audiência busca ativamente saber quem ela indica na bio, expandindo cliques em links significativamente.",
-      screenshot: "https://lh3.googleusercontent.com/d/1zBcWIt1skrC53S3cgxNQgD8pIop3c_Mp",
+      screenshot: "/images/metric_visits.webp",
       icon: Activity,
       highlightBadge: "42.9K Cliques/Ações",
       roiDetail: "Caminho direto de conversão para lojas online de parceiros, comissões de afiliados e páginas de vendas.",
@@ -86,7 +86,7 @@ export default function Metrics() {
       value: metrics.unfollowedViewsPercentage,
       subtext: "Taxa de Descoberta",
       description: "Impressionantes 97,9% do alcance vêm de pessoas que ainda não a seguem. Isso valida o poder de viralização contínua do algoritmo de descoberta do perfil.",
-      screenshot: "https://lh3.googleusercontent.com/d/1C7vengRpQthJYcOq1Bisu4_QqFiJn3QM",
+      screenshot: "/images/metric_nonfollowers.webp",
       icon: Eye,
       highlightBadge: "97.9% Descoberta Orgânica",
       roiDetail: "Perfeito para marcas que querem prospectar novos clientes frios sem custos de anúncios pagos.",
@@ -100,7 +100,7 @@ export default function Metrics() {
       value: metrics.interactions,
       subtext: "Últimos 30 dias",
       description: "Interações reais e altamente qualificadas, repletas de comentários desejando produtos, curtidas sinceras, compartilhamentos em massa e posts salvos.",
-      screenshot: "https://lh3.googleusercontent.com/d/1nTtKnkrC_hb5N8LPBTMG_9C_6nYIC6Ia",
+      screenshot: "/images/metric_interactions.webp",
       icon: Sparkles,
       highlightBadge: "3.2K+ Conversões",
       roiDetail: "A audiência não apenas visualiza, ela debate, salva receitas, consome e compra ativamente os produtos indicados.",
@@ -300,7 +300,7 @@ export default function Metrics() {
                     className="w-full h-full p-1"
                   >
                     <img
-                      src={`${currentProof.screenshot}=w450`}
+                      src={currentProof.screenshot}
                       alt={`Relatório de ${currentProof.title}`}
                       className="w-full h-full object-cover object-top select-none pointer-events-none rounded-[32px] pt-12 pb-4"
                       referrerPolicy="no-referrer"
@@ -354,7 +354,7 @@ export default function Metrics() {
                 </div>
 
                 <img
-                  src={`${item.screenshot}=w250`}
+                  src={item.screenshot}
                   alt={`Galeria Mini ${item.title}`}
                   className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   referrerPolicy="no-referrer"
@@ -403,7 +403,7 @@ export default function Metrics() {
               {/* Left Column: The Large detailed visual panel */}
               <div className="flex-1 bg-zinc-950 p-4 sm:p-6 flex items-center justify-center overflow-y-auto max-h-[50vh] md:max-h-none md:h-[750px]">
                 <img
-                  src={`${lightboxImage}=w1000`}
+                  src={lightboxImage || ""}
                   alt={`Comprovação de ${lightboxTitle}`}
                   className="max-h-full max-w-full object-contain rounded-xl select-none"
                   referrerPolicy="no-referrer"
