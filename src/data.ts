@@ -264,9 +264,37 @@ export const kamillyCardoso = {
   ]
 };
 
+const imageMap: Record<string, string> = {
+  "/images/hero.webp": "1u0_cqy50-AfdtT614-AWuCKXm4PpAX6M",
+  "/images/about.webp": "1aIBwmA8i-wptbTjlsbQ8u3vBXAVDUMis",
+  "/images/avatar.webp": "14O2kGUjFkTZ_gk0zO5hJbXjmPCx3XcTE",
+  "/images/pillars_cabelos.webp": "1CevYmCJZV4OHqcUWw67gwJiL4MR0GBvQ",
+  "/images/pillars_beleza.webp": "1u0_cqy50-AfdtT614-AWuCKXm4PpAX6M",
+  "/images/pillars_moda.webp": "1eA-7bpjYuXD-eCpMHmJxlvL1Eak46pIY",
+  "/images/pillars_lifestyle.webp": "1yDDjL59Cgm3O8y0LpEQfSfdqhLnFhOdK",
+  "/images/pillars_achadinhos.webp": "1m2mcujWN0rXLBvj2zVh_6YyPzC270ZXV",
+  "/images/pillars_virais.webp": "1yDDjL59Cgm3O8y0LpEQfSfdqhLnFhOdK",
+  "/images/metric_reach.webp": "15pZZBS7fi_c-aEgBGCyiQPWdpVi2TrxC",
+  "/images/metric_views.webp": "1TeiQLY8n9wje1qxca9JL4crAhr1rnEK0",
+  "/images/metric_growth.webp": "1aC3qIwnGY0AdO_nRCdo89PZCTudqVSaq",
+  "/images/metric_visits.webp": "10AS7meNmQZwJJCs0G4S9PqBxtn9CS7Gs",
+  "/images/metric_nonfollowers.webp": "1n3-hoEWy_aCsOjkRI1Qa9YeheIxeubpq",
+  "/images/metric_interactions.webp": "10wdhqtmBxxLGd6Rz1R0IP95T13NUox9m"
+};
+
 export function getOptimizedImageUrl(url: string, width: number): string {
   if (!url) return "";
-  // Since all images are local optimized WebP formats (already scaled & compressed), we serve them directly
+  
+  const mappedId = imageMap[url];
+  if (mappedId) {
+    return `https://lh3.googleusercontent.com/d/${mappedId}=w${width}`;
+  }
+
+  if (url.includes("lh3.googleusercontent.com/d/")) {
+    const base = url.split("=")[0];
+    return `${base}=w${width}`;
+  }
+  
   return url;
 }
 
