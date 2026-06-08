@@ -2,7 +2,7 @@ import { Instagram, Eye, TrendingUp, Sparkles, ChevronDown, Award } from "lucide
 import { kamillyCardoso } from "../data";
 
 // Local image path — served directly from Vercel CDN
-const HERO_IMAGE = "/images/herói.webp";
+const HERO_IMAGE = "/images/hero.webp";
 
 export default function Hero() {
   const heroSrc    = HERO_IMAGE;
