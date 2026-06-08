@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "motion/react";
-import { Menu, X, Instagram, Send, Sparkles } from "lucide-react";
+import { Menu, X, Instagram, Sparkles } from "lucide-react";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -10,7 +9,7 @@ export default function Header() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -93,64 +92,56 @@ export default function Header() {
       </header>
 
       {/* Mobile Drawer */}
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 top-[60px] z-40 w-full h-[calc(100vh-60px)] bg-brand-dark/95 backdrop-blur-xl border-t border-brand-border md:hidden flex flex-col justify-between p-8"
-          >
-            <div className="space-y-6 flex flex-col pt-8">
-              {menuItems.map((item, index) => (
-                <motion.button
-                  key={item.label}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.05 }}
-                  onClick={() => handleNavClick(item.href)}
-                  className="text-left text-lg font-serif tracking-wide text-gray-300 hover:text-primary-lightpink transition-colors py-2 border-b border-brand-border/40 flex justify-between items-center"
-                >
-                  <span>{item.label}</span>
-                  <Sparkles size={14} className="text-primary-lightpink/30" />
-                </motion.button>
-              ))}
-            </div>
-
-            <div className="space-y-4 pb-12">
-              <div className="flex justify-center space-x-6 text-gray-400">
-                <a
-                  href="https://instagram.com/kamilly_cardooso"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-primary-lightpink transition-colors flex items-center space-x-2 text-sm"
-                >
-                  <Instagram size={20} />
-                  <span>Instagram</span>
-                </a>
-                <span className="text-brand-border">|</span>
-                <a
-                  href="https://tiktok.com/@kamilly_cardooso"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-primary-lightpink transition-colors flex items-center space-x-2 text-sm"
-                >
-                  <span className="font-bold font-mono">𝅘𝅥𝅯</span>
-                  <span>TikTok</span>
-                </a>
-              </div>
-              <a
-                href="#contato"
-                onClick={() => setMobileMenuOpen(false)}
-                className="block text-center w-full py-4 rounded-xl bg-gradient-to-r from-primary-lightpink to-primary-pink text-brand-dark font-semibold text-sm uppercase tracking-widest"
+      {mobileMenuOpen && (
+        <div
+          className="fixed inset-0 top-[60px] z-40 w-full h-[calc(100vh-60px)] bg-brand-dark/95 backdrop-blur-xl border-t border-brand-border md:hidden flex flex-col justify-between p-8 animate-slide-down"
+        >
+          <div className="space-y-6 flex flex-col pt-8">
+            {menuItems.map((item, index) => (
+              <button
+                key={item.label}
+                onClick={() => handleNavClick(item.href)}
+                style={{ animationDelay: `${index * 0.05}s` }}
+                className="text-left text-lg font-serif tracking-wide text-gray-300 hover:text-primary-lightpink transition-colors py-2 border-b border-brand-border/40 flex justify-between items-center opacity-0 animate-fade-in-left"
               >
-                Quero Fazer uma Parceria
+                <span>{item.label}</span>
+                <Sparkles size={14} className="text-primary-lightpink/30" />
+              </button>
+            ))}
+          </div>
+
+          <div className="space-y-4 pb-12">
+            <div className="flex justify-center space-x-6 text-gray-400">
+              <a
+                href="https://instagram.com/kamilly_cardooso"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary-lightpink transition-colors flex items-center space-x-2 text-sm"
+              >
+                <Instagram size={20} />
+                <span>Instagram</span>
+              </a>
+              <span className="text-brand-border">|</span>
+              <a
+                href="https://tiktok.com/@kamilly_cardooso"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary-lightpink transition-colors flex items-center space-x-2 text-sm"
+              >
+                <span className="font-bold font-mono">𝅘𝅥𝅯</span>
+                <span>TikTok</span>
               </a>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            <a
+              href="#contato"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block text-center w-full py-4 rounded-xl bg-gradient-to-r from-primary-lightpink to-primary-pink text-brand-dark font-semibold text-sm uppercase tracking-widest"
+            >
+              Quero Fazer uma Parceria
+            </a>
+          </div>
+        </div>
+      )}
     </>
   );
 }

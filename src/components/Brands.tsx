@@ -1,4 +1,3 @@
-import { motion } from "motion/react";
 import { kamillyCardoso } from "../data";
 
 export default function Brands() {
@@ -36,21 +35,19 @@ export default function Brands() {
           {brands.map((brand) => {
             const handle = getBrandHandle(brand.name);
             return (
-              <motion.a
+              <a
                 key={brand.name}
                 href={brand.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.05, y: -2 }}
-                transition={{ type: "spring", stiffness: 300, damping: 15 }}
-                className="px-6 py-3.5 rounded-xl bg-white/[0.02] hover:bg-white/[0.06] border border-white/10 hover:border-primary-lightpink/30 text-gray-300 hover:text-white transition-all duration-300 flex items-center space-x-2.5 font-mono text-sm tracking-wide shadow-sm group"
+                className="px-6 py-3.5 rounded-xl bg-white/[0.02] hover:bg-white/[0.06] border border-white/10 hover:border-primary-lightpink/30 text-gray-300 hover:text-white transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 flex items-center space-x-2.5 font-mono text-sm tracking-wide shadow-sm group"
               >
                 <span className="text-primary-lightpink font-sans font-bold text-base transition-colors duration-300 group-hover:text-primary-pink">@</span>
                 <span className="font-sans font-medium text-gray-200 group-hover:text-white transition-colors duration-300">
                   {handle.replace("@", "")}
                 </span>
                 <span className="text-gray-600 group-hover:text-primary-lightpink/95 text-[10px] pl-1 font-sans transition-colors duration-300">↗</span>
-              </motion.a>
+              </a>
             );
           })}
         </div>
