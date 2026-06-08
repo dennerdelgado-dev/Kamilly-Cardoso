@@ -50,7 +50,6 @@ export default function Pillars() {
                   src={getOptimizedImageUrl(item.image, 400)}
                   alt={item.title}
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
-                  referrerPolicy="no-referrer"
                   loading="lazy"
                   decoding="async"
                 />

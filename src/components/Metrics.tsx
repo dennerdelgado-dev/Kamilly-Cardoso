@@ -303,7 +303,6 @@ export default function Metrics() {
                       src={getOptimizedImageUrl(currentProof.screenshot, 450)}
                       alt={`Relatório de ${currentProof.title}`}
                       className="w-full h-full object-cover object-top select-none pointer-events-none rounded-[32px] pt-12 pb-4"
-                      referrerPolicy="no-referrer"
                       loading="lazy"
                       decoding="async"
                     />
@@ -358,7 +357,6 @@ export default function Metrics() {
                   src={getOptimizedImageUrl(item.screenshot, 250)}
                   alt={`Galeria Mini ${item.title}`}
                   className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                  referrerPolicy="no-referrer"
                   loading="lazy"
                   decoding="async"
                 />
@@ -407,7 +405,6 @@ export default function Metrics() {
                   src={getOptimizedImageUrl(lightboxImage || "", 1000)}
                   alt={`Comprovação de ${lightboxTitle}`}
                   className="max-h-full max-w-full object-contain rounded-xl select-none"
-                  referrerPolicy="no-referrer"
                   loading="lazy"
                   decoding="async"
                 />

@@ -53,7 +53,6 @@ export default function Highlights() {
                       src={getOptimizedImageUrl("/images/avatar.webp", 180)} 
                       alt="@kamilly_cardooso Avatar" 
                       className="w-full h-full object-cover rounded-full"
-                      referrerPolicy="no-referrer"
                       loading="lazy"
                       decoding="async"
                     />

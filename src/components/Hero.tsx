@@ -143,7 +143,6 @@ export default function Hero() {
                 src={getOptimizedImageUrl("/images/hero.webp", 800)}
                 alt="Kamilly Cardoso Digital Influencer"
                 className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700 ease-out"
-                referrerPolicy="no-referrer"
                 fetchPriority="high"
                 decoding="async"
               />

@@ -46,7 +46,6 @@ export default function About() {
                     src={getOptimizedImageUrl("/images/about.webp", 500)}
                     alt="Kamilly Cardoso Lifestyle and Skincare Aesthetic representation"
                     className="w-full h-full object-cover object-center"
-                    referrerPolicy="no-referrer"
                     loading="lazy"
                     decoding="async"
                   />
