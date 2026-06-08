@@ -39,13 +39,6 @@ export default defineConfig(() => {
           preset: 'recommended' as const,
           propertyReadSideEffects: false,
         },
-        output: {
-          manualChunks: {
-            'react-vendor': ['react', 'react-dom'],
-            'motion': ['motion/react'],
-            'icons': ['lucide-react'],
-          },
-        },
       },
     },
     server: {
