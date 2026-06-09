@@ -162,12 +162,11 @@ export default function Metrics() {
                 const IsActive = proof.id === activeTab;
                 const IconComponent = proof.icon;
                 return (
-                  <motion.button
+                  // ✅ Trocado de motion.button para button com CSS — remove 6 instâncias de motion da renderização inicial
+                  <button
                     key={proof.id}
                     onClick={() => setActiveTab(proof.id)}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className={`p-5 rounded-2xl bg-[#0f0f11] border ${IsActive ? "border-primary-lightpink/60 bg-gradient-to-br " + proof.accent : "border-white/5 hover:border-white/10"} text-left transition-all duration-300 relative group overflow-hidden`}
+                    className={`p-5 rounded-2xl bg-[#0f0f11] border ${IsActive ? "border-primary-lightpink/60 bg-gradient-to-br " + proof.accent : "border-white/5 hover:border-white/10"} text-left transition-all duration-300 relative group overflow-hidden hover:scale-[1.02] active:scale-[0.98] transform`}
                   >
                     {/* Top corner minimal icon indicator */}
                     <div className="flex items-center justify-between mb-3 relative z-10">
@@ -203,7 +202,7 @@ export default function Metrics() {
 
                     {/* Top hover light edge line */}
                     <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-primary-lightpink/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </motion.button>
+                  </button>
                 );
               })}
             </div>
@@ -340,11 +339,11 @@ export default function Metrics() {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
             {performanceProofs.map((item) => (
-              <motion.div
+              // ✅ Trocado de motion.div para div com CSS — remove 6 instâncias adicionais de motion
+              <div
                 key={item.id + "-thumb"}
                 onClick={() => handleOpenLightbox(item.screenshot, item.title)}
-                whileHover={{ scale: 1.03, y: -2 }}
-                className="group relative rounded-xl overflow-hidden aspect-[9/16] bg-[#0c0c0e] border border-white/5 hover:border-primary-pink/30 cursor-zoom-in transition-all duration-300"
+                className="group relative rounded-xl overflow-hidden aspect-[9/16] bg-[#0c0c0e] border border-white/5 hover:border-primary-pink/30 cursor-zoom-in transition-all duration-300 hover:scale-[1.03] hover:-translate-y-0.5 transform"
               >
                 {/* Soft backdrop overlay */}
                 <div className="absolute inset-0 bg-black/30 group-hover:bg-black/0 transition-colors duration-300 z-10 flex flex-col justify-end p-3">
@@ -365,7 +364,7 @@ export default function Metrics() {
                 <div className="absolute inset-0 m-auto w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-90 group-hover:scale-100 z-20">
                   <Search size={12} />
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
