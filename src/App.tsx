@@ -15,7 +15,6 @@ const Contact = lazy(() => import("./components/Contact"));
 const FloatingActions = lazy(() => import("./components/FloatingActions"));
 
 export default function App() {
-  // Sync state between selected pricing packages and the pre-filled contact form
   const [selectedPacks, setSelectedPacks] = useState<string[]>([]);
   const [prefilledTotal, setPrefilledTotal] = useState<number>(0);
 
@@ -35,68 +34,71 @@ export default function App() {
         {/* Navigation Top Header */}
         <Header />
 
-        {/* Hero Section Banner */}
-        <Hero />
+        {/* Main landmark — fixes accessibility "no main landmark" warning */}
+        <main>
+          {/* Hero Section Banner */}
+          <Hero />
 
-        {/* Brands Trust Marquee Ribbon */}
-        <Brands />
+          {/* Brands Trust Marquee Ribbon */}
+          <Brands />
 
-        {/* Detailed Professional About Block */}
-        <Suspense fallback={<div className="min-h-[500px]" />}>
-          <About />
-        </Suspense>
+          {/* Detailed Professional About Block */}
+          <Suspense fallback={<div className="min-h-[500px]" />}>
+            <About />
+          </Suspense>
 
-        {/* Core Content Pillar Categories */}
-        <Suspense fallback={<div className="min-h-[700px]" />}>
-          <Pillars />
-        </Suspense>
+          {/* Core Content Pillar Categories */}
+          <Suspense fallback={<div className="min-h-[700px]" />}>
+            <Pillars />
+          </Suspense>
 
-        {/* Key Metrics Board Dashboard */}
-        <Suspense fallback={<div className="min-h-[800px]" />}>
-          <Metrics />
-        </Suspense>
+          {/* Key Metrics Board Dashboard */}
+          <Suspense fallback={<div className="min-h-[800px]" />}>
+            <Metrics />
+          </Suspense>
 
-        {/* Verified Demographics Split Grid */}
-        <Suspense fallback={<div className="min-h-[600px]" />}>
-          <Demographics />
-        </Suspense>
+          {/* Verified Demographics Split Grid */}
+          <Suspense fallback={<div className="min-h-[600px]" />}>
+            <Demographics />
+          </Suspense>
 
-        {/* Instagram Spotlight Highlight Section */}
-        <Suspense fallback={<div className="min-h-[600px]" />}>
-          <Highlights />
-        </Suspense>
+          {/* Instagram Spotlight Highlight Section */}
+          <Suspense fallback={<div className="min-h-[600px]" />}>
+            <Highlights />
+          </Suspense>
 
-        {/* Core Bento Differentials Grid */}
-        <Suspense fallback={<div className="min-h-[600px]" />}>
-          <Differentials />
-        </Suspense>
+          {/* Core Bento Differentials Grid */}
+          <Suspense fallback={<div className="min-h-[600px]" />}>
+            <Differentials />
+          </Suspense>
 
-        {/* Collaboration Pricing Packages with dynamic proposal estimator */}
-        <Suspense fallback={<div className="min-h-[800px]" />}>
-          <Packages onSelectPackages={handleSelectPackages} />
-        </Suspense>
+          {/* Collaboration Pricing Packages */}
+          <Suspense fallback={<div className="min-h-[800px]" />}>
+            <Packages onSelectPackages={handleSelectPackages} />
+          </Suspense>
 
-        {/* Contact Input Forms Grid */}
-        <Suspense fallback={<div className="min-h-[650px]" />}>
-          <Contact prefilledPackages={selectedPacks} prefilledTotal={prefilledTotal} />
-        </Suspense>
+          {/* Contact Input Forms Grid */}
+          <Suspense fallback={<div className="min-h-[650px]" />}>
+            <Contact prefilledPackages={selectedPacks} prefilledTotal={prefilledTotal} />
+          </Suspense>
+        </main>
 
         {/* Floating Utilities */}
         <Suspense fallback={null}>
           <FloatingActions />
         </Suspense>
 
-        {/* Footer layout: Minimal unbranded matching exact copyright requirement */}
+        {/* Footer — text-gray-300 para contraste suficiente no fundo escuro */}
         <footer className="w-full bg-brand-dark border-t border-brand-border/40 py-12 mt-auto">
           <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
             <div className="space-y-1">
               <span className="font-serif text-sm tracking-widest font-black text-white">KAMILLY CARDOSO</span>
-              <p className="text-xs text-gray-400 font-normal">
+              <p className="text-xs text-gray-300 font-normal">
                 Criadora de Conteúdo • Beleza • Cabelos • Moda • Lifestyle • Achadinhos
               </p>
             </div>
             
-            <div className="text-xs text-gray-500 font-mono">
+            <div className="text-xs text-gray-300 font-mono">
               <span>© 2026 Kamilly Cardoso. Todos os direitos reservados.</span>
               <span className="block md:inline md:ml-2">Dicas de cabelo, beleza, moda, lifestyle e achadinhos.</span>
             </div>
